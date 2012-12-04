@@ -1,0 +1,23 @@
+#!/bin/bash
+#Program 
+#	Exercise 4 check the directory
+
+dir="/root/test/logical"
+if [ ! -e "$dir" ];then
+		touch $dir
+		echo "Just make a file logical"
+		exit 1
+elif [ -e "$dir" ]&&[ -f "$dir" ];then
+		rm -f $dir
+		mkdir -p $dir
+		echo "remove file ==>logical"
+		echo "and make a directory logical"
+		exit 1
+elif [ -e "$dir" ]&&[ -d "$dir" ];then
+		rm -rf $dir
+		echo "remove directory ==>logical"
+		exit 1
+else 
+		echo "Does here have anything?"
+fi
+		

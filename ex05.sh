@@ -1,0 +1,13 @@
+#!/bin/bash
+#Program:
+#		Display the account.
+
+#MARK!! "`cut -d':' -f1 /etc/passwwd`"
+account=`cut -d':' -f1 /etc/passwd`
+i=1
+for user in $account
+do
+		echo "The $i account is \"$user\""
+		#declare -i i=$i+1
+		i=$(($i+1))
+done

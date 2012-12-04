@@ -1,0 +1,13 @@
+#!/bin/bash
+#Program 
+#	Calculate 1+2+...+$(user input a number) ,and print the result
+
+read -p "Please input a number to cal" nu
+result=0
+for((i=0;i<=$nu;i=i+1))
+do
+		result=$(($result+$i))
+done
+echo "the result of '1+2+..+$nu' is ==> $result"
+
+	
